@@ -1,7 +1,8 @@
 :root{
-  --primary-dark: #333;
-  --primary-light: #ededed;
-  --secondary-light: #fefefe;
+  --primary-dark: rgb(245, 245, 245);
+  --secondary-dark: #dacaca;
+  --primary-light: rgba(0, 0, 0, 0.596);
+  --secondary-light: #ffffff;
 }
 
 
@@ -21,6 +22,8 @@ button,input{
   
 }
 .header{
+  font-family: 'Silkscreen', cursive;
+  color:white;
   text-align: center;
   font-size: 80px;
   margin-bottom: -50px;
@@ -41,6 +44,7 @@ button,input{
   justify-content: center;
   gap:30px;
   width: 200px;
+  color:white
 }
 button{
   padding:10px 20px;
@@ -54,6 +58,7 @@ button:active{
 }
 button,input[type="color"]{
   transition:transform 0.2s ease-in-out;
+  background-color: inherit;
 }
 button:hover, input[type="color"]:hover{
   transform:scale(1.05);
@@ -85,8 +90,15 @@ input[type="color"]::-webkit-color-swatch {
   background-color: var(--secondary-light);
   box-shadow: rgba(0, 0, 0, 0.24)0px 3px 8px;
 }
+.grid.deactivated .border-grid{
+  border:0;
+
+}
 .grid-element{
   user-select: none;
+}
+.border-grid{
+  border:1px solid black;
 }
 
 .size-value{
@@ -95,14 +107,14 @@ input[type="color"]::-webkit-color-swatch {
 }
 input[type='range'] {
   -webkit-appearance: none;
-  background-color: var(--primary-light);
+  background-color: rgba(99, 96, 96, 0.596)
 }
 
 input[type='range']::-webkit-slider-runnable-track {
   height: 13px;
-  border: 1px solid var(--primary-dark);
+  border: 1px solid var(--primary-light);
   border-radius: 25px;
-  background: var(--secondary-light);
+  background: var(--primary-dark);
 }
 
 input[type='range']::-webkit-slider-thumb {
@@ -111,5 +123,5 @@ input[type='range']::-webkit-slider-thumb {
   height: 35px;
   border-radius: 25px;
   margin-top: -11.5px;
-  background: var(--primary-dark);
+  background: black
 }
