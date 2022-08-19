@@ -84,7 +84,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .grid{
   display:grid;
-  border: 1px solid black;
+  border: 0.5px solid black;
   width: 800px;
   height:800px;
   background-color: var(--secondary-light);
@@ -98,7 +98,7 @@ input[type="color"]::-webkit-color-swatch {
   user-select: none;
 }
 .border-grid{
-  border:1px solid black;
+  border:1px solid rgb(142, 142, 142);
 }
 
 .size-value{
