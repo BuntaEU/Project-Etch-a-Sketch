@@ -1,4 +1,4 @@
-const DEFAULT_COLOR = "#333333";
+const DEFAULT_COLOR = "#FFA500";
 const DEFAULT_MODE = "color";
 const DEFAULT_SIZE = "16";
 
@@ -28,7 +28,6 @@ const sizeSlider = document.getElementById("sizeSlider");
 const grid = document.getElementById("grid");
 const toggle = document.getElementById("toggleGrid");
 
-
 colorPicker.oninput = (e) => setCurrentColor(e.target.value);
 colorButton.onclick = () => setCurrentMode("color");
 rainbowButton.onclick = () => setCurrentMode("rainbow");
@@ -36,12 +35,11 @@ eraserButton.onclick = () => setCurrentMode("eraser");
 resetButton.onclick = () => reloadGrid();
 sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value);
 sizeSlider.onchange = (e) => changeSize(e.target.value);
-toggle.onclick =() => toggleGrid();
+toggle.onclick = () => toggleGrid();
 
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
-
 
 function changeSize(value) {
 	setCurrentSize(value);
@@ -64,7 +62,7 @@ function setupGrid(size) {
 	grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 	for (let i = 0; i < size * size; i++) {
 		const gridElement = document.createElement("div");
-		gridElement.classList.add("grid-element") ;
+		gridElement.classList.add("grid-element");
 		gridElement.classList.add("border-grid");
 		gridElement.addEventListener("mouseover", changeColor);
 		gridElement.addEventListener("mousedown", changeColor);
@@ -72,7 +70,7 @@ function setupGrid(size) {
 	}
 }
 
-function toggleGrid(){
+function toggleGrid() {
 	grid.classList.toggle("deactivated");
 }
 function changeColor(e) {

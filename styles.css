@@ -28,6 +28,10 @@ button,input{
   font-size: 80px;
   margin-bottom: 50px;
 }
+header p{
+  margin-top: 0px;
+  font-size: 20px ;
+}
 
 .main {
   display:flex;
@@ -82,6 +86,10 @@ input[type="color"]::-webkit-color-swatch {
   border-radius: 500px;
 }
 
+audio{
+  margin-top: 100px;
+  margin-bottom: -100px;
+}
 .grid{
   display:grid;
   border: 0.5px solid black;
@@ -126,10 +134,17 @@ input[type='range']::-webkit-slider-thumb {
   margin-top: -11.5px;
   background: black
 }
+#player{
+  width: 20%;
+  height: 20px;
+}
 @media (max-width: 1200px) {
   .main {
     justify-content: center;
     align-items: center;
+  }
+  #player{
+    margin-bottom: 0px;
   }
 }
 
